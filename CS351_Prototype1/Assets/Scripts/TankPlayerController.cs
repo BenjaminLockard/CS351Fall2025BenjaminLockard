@@ -1,3 +1,7 @@
+/*Benjamin Lockard
+ *Prototype #1 (Follow Along)
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
