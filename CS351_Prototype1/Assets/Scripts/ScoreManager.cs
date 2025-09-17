@@ -14,6 +14,8 @@ public class ScoreManager : MonoBehaviour
     public static bool gameOver;
     public static bool won;
     public static int score;
+    // Set in inspector
+    public int scoreToWin;
 
     //Text Box ref
     public TMP_Text textbox;
@@ -38,7 +40,7 @@ public class ScoreManager : MonoBehaviour
             textbox.text = "YOU LOSE\nPress R to Replay";
         }
 
-        if (score >= 3) {
+        if (score >= scoreToWin) {
             won = true;
             gameOver = true;
         }
