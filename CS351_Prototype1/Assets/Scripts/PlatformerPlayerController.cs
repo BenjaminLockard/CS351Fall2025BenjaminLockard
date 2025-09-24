@@ -21,6 +21,7 @@ public class PlatformerPlayerController : MonoBehaviour
 
     //transform for ground-detecting position
     public Transform groundCheck;
+
     public float groundCheckRadius;
 
     //References rigid body
@@ -29,12 +30,16 @@ public class PlatformerPlayerController : MonoBehaviour
     private float horizontalInput;
     //vertical var
 
+    // true if grounded
+    private bool isGrounded;
+
     // Start is called before the first frame update
     void Start()
     {
+        groundCheckRadius = 0.2f;
         rb = GetComponent<Rigidbody2D>();
 
-        if(groundCheck = null)
+        if(groundCheck == null)
         {
             Debug.LogError("groundCheck unassigned to player controller.");
         }
@@ -47,7 +52,7 @@ public class PlatformerPlayerController : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.velocity = newVector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
     }
