@@ -33,6 +33,10 @@ public class PlatformerPlayerController : MonoBehaviour
     // true if grounded
     private bool isGrounded;
 
+    private AudioSource playerAudio;
+
+    public AudioClip jumpSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +47,8 @@ public class PlatformerPlayerController : MonoBehaviour
         {
             Debug.LogError("groundCheck unassigned to player controller.");
         }
+
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -53,6 +59,7 @@ public class PlatformerPlayerController : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
 
     }
