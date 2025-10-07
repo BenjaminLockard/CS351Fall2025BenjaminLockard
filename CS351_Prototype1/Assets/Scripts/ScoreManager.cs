@@ -35,9 +35,9 @@ public class ScoreManager : MonoBehaviour
         if (!gameOver) {
             textbox.text = "SCORE: " + score;
         } else if (won) {
-            textbox.text = "YOU WIN\nPress R to Replay";
+            textbox.text = "YOU WIN\tPress R to Replay";
         } else {
-            textbox.text = "YOU LOSE\nPress R to Replay";
+            textbox.text = "YOU LOSE\tPress R to Replay";
         }
 
         if (score >= scoreToWin) {

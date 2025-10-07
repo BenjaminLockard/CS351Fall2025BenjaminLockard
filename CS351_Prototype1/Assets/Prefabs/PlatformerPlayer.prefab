@@ -143,6 +143,7 @@ MonoBehaviour:
     m_Bits: 64
   groundCheck: {fileID: 7267949189327650908}
   groundCheckRadius: 0
+  jumpSound: {fileID: 8300000, guid: b104b3ea0971ee7409f527754a69fec5, type: 3}
 --- !u!114 &7267949188870667958
 MonoBehaviour:
   m_ObjectHideFlags: 0
