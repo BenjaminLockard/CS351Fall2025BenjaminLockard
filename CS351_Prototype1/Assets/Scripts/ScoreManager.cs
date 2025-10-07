@@ -33,11 +33,11 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         if (!gameOver) {
-            textbox.text = "SCORE: " + score;
+            textbox.text = "POINTS TO FIND: " + (16 - score);
         } else if (won) {
-            textbox.text = "YOU WIN\tPress R to Replay";
+            textbox.text = "YOU WIN - Press R to Replay";
         } else {
-            textbox.text = "YOU LOSE\tPress R to Replay";
+            textbox.text = "YOU LOSE - Press R to Replay";
         }
 
         if (score >= scoreToWin) {

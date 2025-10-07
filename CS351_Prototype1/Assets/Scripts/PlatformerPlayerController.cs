@@ -40,7 +40,7 @@ public class PlatformerPlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        groundCheckRadius = 0.2f;
+        groundCheckRadius = 0.1f;
         rb = GetComponent<Rigidbody2D>();
 
         if(groundCheck == null)
