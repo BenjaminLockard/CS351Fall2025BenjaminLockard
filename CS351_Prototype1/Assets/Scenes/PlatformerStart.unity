@@ -20956,6 +20956,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7267949188870667953, guid: f16f5394b6c3d1040aea1d44827403f8, type: 3}
   m_PrefabInstance: {fileID: 7267949189424147778}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1628410868
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628410867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 202990bc5dc18f64583392e87ed54451, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!82 &1628410874
 AudioSource:
   m_ObjectHideFlags: 0
@@ -37151,6 +37172,10 @@ PrefabInstance:
       value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 7267949188870667957, guid: f16f5394b6c3d1040aea1d44827403f8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6367560908665664636, guid: 3bbd10845530cb64b8055604076cc530, type: 3}
+    - target: {fileID: 7267949188870667957, guid: f16f5394b6c3d1040aea1d44827403f8, type: 3}
       propertyPath: m_Color.b
       value: 0.40029067
       objectReference: {fileID: 0}
@@ -37188,11 +37213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7267949188870667962, guid: f16f5394b6c3d1040aea1d44827403f8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7267949188870667962, guid: f16f5394b6c3d1040aea1d44827403f8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7267949188870667962, guid: f16f5394b6c3d1040aea1d44827403f8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37200,7 +37225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7267949188870667962, guid: f16f5394b6c3d1040aea1d44827403f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7267949188870667962, guid: f16f5394b6c3d1040aea1d44827403f8, type: 3}
       propertyPath: m_LocalPosition.z

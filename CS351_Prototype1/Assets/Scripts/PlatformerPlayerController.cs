@@ -72,11 +72,11 @@ public class PlatformerPlayerController : MonoBehaviour
 
         if (horizontalInput > 0)
         {
-            transform.localScale = new Vector3(0.6f, 0.6f, 0.6f); //right
+            transform.localScale = new Vector3(1f, 1f, 1f); //right
         }
         else if (horizontalInput < 0)
         {
-            transform.localScale = new Vector3(-0.6f, 0.6f, 0.6f); //left
+            transform.localScale = new Vector3(-1f, 1f, 1f); //left
         }
     }
 
