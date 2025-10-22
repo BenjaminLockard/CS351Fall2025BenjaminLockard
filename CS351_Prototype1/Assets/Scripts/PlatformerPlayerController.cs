@@ -37,6 +37,8 @@ public class PlatformerPlayerController : MonoBehaviour
 
     public AudioClip jumpSound;
 
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +51,7 @@ public class PlatformerPlayerController : MonoBehaviour
         }
 
         playerAudio = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -67,6 +70,12 @@ public class PlatformerPlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+
+        animator.SetFloat("xVelocityAbs", Mathf.Abs(rb.velocity.x));
+
+        animator.SetFloat("yVelocity", rb.velocity.y);
+
+        animator.SetBool("onGround", isGrounded);
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
