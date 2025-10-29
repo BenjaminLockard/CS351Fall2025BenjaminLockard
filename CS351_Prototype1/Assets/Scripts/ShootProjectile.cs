@@ -29,7 +29,7 @@ public class ShootProjectile : MonoBehaviour
     {
         GameObject firedProjectile = Instantiate(projPrefab, firePoint.position, firePoint.rotation);
 
-        Destroy(firedProjectile, 3f);
+        Destroy(firedProjectile, 1.5f);
     }
 
 }
