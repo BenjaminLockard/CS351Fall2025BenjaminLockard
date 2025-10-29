@@ -23,9 +23,9 @@ public class PlayerProjectile : MonoBehaviour
         rb.velocity = transform.right * speed;
     }
 
-    void onTriggerEnter2D(Collider hitTrigger)
+    void OnTriggerEnter2D(Collider2D hitTrigger)
     {
-        Enemy enemy = hitTrigger.gameObject.GetComponent<Enemy>();
+        Enemy enemy = hitTrigger.GetComponent<Enemy>();
 
         if (enemy != null)
             enemy.takeDamage(damage);
