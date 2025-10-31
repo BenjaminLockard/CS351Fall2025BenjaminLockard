@@ -9745,7 +9745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582265699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.157, y: 0.014, z: 0}
+  m_LocalPosition: {x: 0.157, y: -0.082, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1628410875}
@@ -21135,7 +21135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54698ff17eeedfb42861d53f00aa3bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projPrefab: {fileID: 8061598652933925361, guid: 12af79f36a0894847a6999e71eef3270, type: 3}
+  projPrefab: {fileID: 2642378705072025300, guid: 3fa0922f169165d498f0a851309311ad, type: 3}
   firePoint: {fileID: 582265700}
 --- !u!82 &1628410874
 AudioSource:
@@ -32986,6 +32986,7 @@ GameObject:
   - component: {fileID: 1760318726}
   - component: {fileID: 1760318725}
   - component: {fileID: 1760318724}
+  - component: {fileID: 1760318728}
   m_Layer: 0
   m_Name: CrabEnemy
   m_TagString: Untagged
@@ -33020,7 +33021,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.16663784}
+  m_Offset: {x: 0, y: -0.09306204}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -33031,7 +33032,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6847277, y: 1.6429132}
+  m_Size: {x: 1.6847277, y: 1.4957616}
   m_EdgeRadius: 0
 --- !u!212 &1760318726
 SpriteRenderer:
@@ -33070,11 +33071,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1729706193
-  m_SortingLayer: 1
+  m_SortingLayerID: 619985803
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92dc5fd35ad07452cbb4501123046b43, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.92924523, g: 1, b: 0.9213836, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -33092,12 +33093,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760318723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.97, y: 1.93, z: 0}
+  m_LocalPosition: {x: 16.97, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1760318728
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760318723}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da57194f4d3c1764da1620e7faf6096c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1820907459 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8719563740694393046, guid: f99daa98bf2f28c4088fd57730a32a21, type: 3}

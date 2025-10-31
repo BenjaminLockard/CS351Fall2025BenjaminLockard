@@ -14,7 +14,9 @@ public class PlayerProjectile : MonoBehaviour
     public float speed;
 
     public int damage = 1;
-    
+
+    public GameObject impactEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,10 @@ public class PlayerProjectile : MonoBehaviour
             enemy.takeDamage(damage);
 
         if (hitTrigger.gameObject.tag != "Player")
+        {
+            Instantiate(impactEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
