@@ -32,7 +32,7 @@ public class PlayerProjectile : MonoBehaviour
         if (enemy != null)
             enemy.takeDamage(damage);
 
-        if (hitTrigger.gameObject.tag != "Player")
+        if ((hitTrigger.gameObject.tag != "Player") && (hitTrigger.gameObject.tag != "Point"))
         {
             Instantiate(impactEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
