@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     public int health = 5;
 
+    public int damage = 2;
+
     public GameObject deathEffect;
 
     private DisplayBar healthBar;
@@ -18,6 +20,28 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
             Die();
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+
+            if (playerHealth == null)
+            {
+                Debug.LogError("Player Health Script DNE");
+                return;
+            }
+
+            playerHealth.TakeDamage(damage);
+
+            playerHealth.Knockback(transform.position);
+        }
+    }
+
+
+
 
     void Die()
     {
