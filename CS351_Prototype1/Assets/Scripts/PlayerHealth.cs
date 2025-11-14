@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    private AudioSource playerAudio;
+    public AudioClip playerDamageSound;
+
+    private Animator animator;
+
     public int health = 10;
 
     public DisplayBar healthBar;
@@ -45,6 +50,11 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
             Die();
+        else
+        {
+            playerAudio.PlayOneShot(playerDamageSound, 1.5f);
+            animator.SetBool("hit", true);
+        }
     }
 
     public void Die()
@@ -52,8 +62,8 @@ public class PlayerHealth : MonoBehaviour
         ScoreManager.gameOver = true;
         // TODO: SFX & FX for player death
 
-        //GameObject deathEffect = Instantiate(playerDeathEffect, transform.position, Quaternion.identity);
-        //Destroy(deathEffect, 2f);
+
+        GameObject deathEffect = Instantiate(playerDeathEffect, transform.position, Quaternion.identity);
 
         gameObject.SetActive(false);
     }
@@ -62,10 +72,17 @@ public class PlayerHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(hitRecoveryTime);
         hitRecently = false;
+
+        animator.SetBool("hit", false);
     }
 
     void Start()
     {
+        
+        playerAudio = GetComponent<AudioSource>();
+
+        animator = GetComponent<Animator>();
+
         rb = GetComponent<Rigidbody2D>();
 
         if (rb == null)
@@ -79,6 +96,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (ScoreManager.gameOver == true)
+            Die();
     }
 }
