@@ -35,9 +35,9 @@ public class ScoreManager : MonoBehaviour
         if (!gameOver) {
             textbox.text = "POINTS TO FIND: " + (16 - score);
         } else if (won) {
-            textbox.text = "LOSER - R to Replay";
-        } else {
             textbox.text = "WINNER - R to Replay";
+        } else {
+            textbox.text = "LOSER - R to Replay";
         }
 
         if (score >= scoreToWin) {
