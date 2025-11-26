@@ -15,6 +15,8 @@ public class EnemyWalkChase : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
+    private SpriteRenderer sr;
+
     bool IsGroundAhead()
     {
         float groundCheckDistance = 2.0f;
@@ -31,10 +33,12 @@ public class EnemyWalkChase : MonoBehaviour
     {
         if (playerDirection.x < 0)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            sr.flipX = false;
+            //transform.rotation = Quaternion.Euler(0, 0, 0);
         } else
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            sr.flipX = true;
+            //transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
 
@@ -47,13 +51,13 @@ public class EnemyWalkChase : MonoBehaviour
     private void StopMoving()
     {
         rb.velocity = new Vector2(0, rb.velocity.y);
-        Debug.Log("stopped");
         anim.SetBool("isMoving", false);
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         playerTransform = GameObject.FindWithTag("Player").transform;
@@ -80,6 +84,9 @@ public class EnemyWalkChase : MonoBehaviour
             {
                 StopMoving();
             }
+        } else
+        {
+            StopMoving();
         }
     }
 }

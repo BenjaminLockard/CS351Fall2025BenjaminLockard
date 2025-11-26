@@ -283,8 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50075f0108a1261489bb328b82e3f3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseRange: 4
-  moveSpeed: 1.5
+  chaseRange: 6
+  moveSpeed: 2.5
 --- !u!1001 &338625181521472629
 PrefabInstance:
   m_ObjectHideFlags: 0
