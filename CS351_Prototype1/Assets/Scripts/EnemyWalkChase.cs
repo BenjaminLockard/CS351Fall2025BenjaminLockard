@@ -23,9 +23,11 @@ public class EnemyWalkChase : MonoBehaviour
         LayerMask groundLayer = LayerMask.GetMask("Ground");
 
         //determine direction faced
-        Vector2 enemyDirection = playerTransform.rotation.y == 0 ? Vector2.left : Vector2.right;
+        Vector2 enemyDirection = (!sr.flipX) ? Vector2.left : Vector2.right;
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down + enemyDirection, groundCheckDistance, groundLayer);
+        //Debug.DrawRay(transform.position, Vector2.down + enemyDirection, Color.red);
+
         return hit.collider != null;
     }
 
